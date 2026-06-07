@@ -1,11 +1,11 @@
 ---
 name: hugo-tailwind-site
-description: Hugo 静态网站搭建全流程 — 从设计稿到多页面站点（Tailwind CSS v3 + Hugo Pipes + 组件化模板体系）
+description: Hugo 静态网站搭建全流程 — 从设计稿到多页面站点（纯 CSS + Hugo Pipes + 组件化模板体系）
 source: auto-skill
-extracted_at: '2026-06-07T08:12:00.000Z'
+extracted_at: '2026-06-07T09:13:10.388Z'
 ---
 
-# Hugo + Tailwind CSS 静态站点搭建
+# Hugo + 纯 CSS 静态站点搭建
 
 ## 适用场景
 - 将单页或多页 HTML 设计稿迁移为 Hugo 静态网站生成器项目
@@ -18,10 +18,9 @@ extracted_at: '2026-06-07T08:12:00.000Z'
 
 ```
 hugo new site <site-name>
-cd <site-name>
-npm init -y
-npm install -D tailwindcss postcss postcss-cli autoprefixer
 ```
+
+无需 npm 依赖，CSS 直接通过 Hugo Pipes 构建。
 
 ### 2. 配置文件 (hugo.toml)
 
@@ -31,47 +30,40 @@ npm install -D tailwindcss postcss postcss-cli autoprefixer
 - `[markup.goldmark.renderer] unsafe = true` — 允许内容中的内联 HTML
 - `disableKinds` — 禁用不需要的分类/tag 自动页
 
-### 3. Tailwind CSS 集成（Hugo Pipes 方式）
+### 3. CSS（Hugo Pipes 直接构建）
 
-**assets/css/main.css:**
+**assets/css/main.css** — 纯 CSS，无框架依赖：
 ```css
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-/* 自定义组件样式用 @layer components {} */
-```
-
-**tailwind.config.js** — 扩展主题色、maxWidth、字体系列：
-```js
-module.exports = {
-  content: ["layouts/**/*.html", "content/**/*.md"],
-  theme: {
-    extend: {
-      colors: { brand: "#165DFF", deep: "#1D2129", surface: "#F5F7FA", ... },
-      maxWidth: { content: "1200px" },
-    }
-  }
+html {
+  scroll-behavior: smooth;
 }
-```
 
-**postcss.config.js:**
-```js
-module.exports = {
-  plugins: [
-    require("tailwindcss"),
-    require("autoprefixer"),
-  ]
+.nav-link {
+  position: relative;
 }
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background: #165DFF;
+  transition: all 200ms;
+}
+.nav-link:hover::after {
+  width: 100%;
+}
+/* 自定义组件样式、响应式媒体查询等 */
 ```
 
 **在 baseof.html 中通过 Hugo Pipes 引入：**
 ```go-html-template
-{{ $styles := resources.Get "css/main.css" | resources.PostCSS }}
-{{ if hugo.IsProduction }}
-  {{ $styles = $styles | resources.Minify | resources.Fingerprint }}
-{{ end }}
+{{ $styles := resources.Get "css/main.css" | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $styles.RelPermalink }}">
 ```
+
+不需要 PostCSS、Tailwind 等构建工具链，Hugo 原生 `resources.Get` + `minify` + `fingerprint` 即可。
 
 ### 4. 模板层级设计
 
@@ -109,9 +101,28 @@ layout: "product"     # 对应 layouts/product/single.html
 
 ### 7. 响应式断点策略
 
-- `max-w-content` (1200px) + `mx-auto` + `px-4` (16px 移动端内边距) 作为内容容器
-- 卡片网格：`grid-cols-1 sm:grid-cols-2 lg:grid-cols-3`
-- 导航：PC 横排 `flex`，移动端汉堡菜单 `lg:hidden`
+使用 CSS 媒体查询控制响应式行为：
+```css
+/* 移动端优先，内容容器 */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* 卡片网格 */
+.card-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+@media (min-width: 640px) {
+  .card-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 1024px) {
+  .card-grid { grid-template-columns: repeat(3, 1fr); }
+}
+```
 
 ## 8. 导航栏动态激活状态
 
@@ -185,11 +196,10 @@ Pages → 项目 → Custom domains → 添加域名，Cloudflare 自动配置 D
 
 ### Windows 环境
 - 系统 `hugo` 命令可能被 `.bat` 包装脚本拦截 → 使用 `hugo.exe` 全路径直接调用
-- PostCSS 需全局安装：`npm install -g postcss-cli`
 
-### Tailwind CSS v3 + Hugo Pipes
-- `@apply` 指令中**不支持响应式变体**（如 `@apply lg:block`），改用标准 CSS 媒体查询
-- Hugo Pipes 的 `hugo.IsProduction` 在部分版本不可用 → 简化为始终 minify + fingerprint
+### CSS + Hugo Pipes
+- Hugo Pipes 的 `resources.Minify` 会压缩 CSS，开发时可跳过 minify 便于调试
+- 响应式样式统一使用标准 CSS 媒体查询，不使用框架变体
 
 ### 锚点导航
 - 页面内的 section 需要明确的 `id` 属性供悬浮导航定位

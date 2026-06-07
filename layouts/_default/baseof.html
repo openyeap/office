@@ -7,7 +7,7 @@
     <meta name="keywords" content="{{ .Site.Params.keywords }}">
     <meta name="description" content="{{ .Site.Params.description }}">
 
-    {{ $styles := resources.Get "css/main.css" | resources.PostCSS | minify | fingerprint }}
+    {{ $styles := resources.Get "css/main.css" | minify | fingerprint }}
     <link rel="stylesheet" href="{{ $styles.RelPermalink }}">
 </head>
 <body class="bg-white text-deep font-sans antialiased">

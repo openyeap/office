@@ -1,6 +1,6 @@
 # ABSLN 官网
 
-基于 Hugo + Tailwind CSS v3 构建的静态官网。
+基于 Hugo 构建的静态官网。
 
 ## 项目结构
 
@@ -13,7 +13,7 @@ content/             # 页面内容（Markdown + HTML）
   koffer.md          # 安全解释器
   quant.md           # 量化实战
 layouts/             # Hugo 模板与组件
-assets/css/main.css  # Tailwind 入口样式
+assets/css/main.css  # 样式入口
 hugo.toml            # 站点配置
 ```
 
@@ -56,5 +56,5 @@ npx wrangler pages deploy public
 ## 技术栈
 
 - **Hugo** — Go 语言静态网站生成器
-- **Tailwind CSS v3** — 通过 Hugo Pipes + PostCSS 管道集成
+- **纯 CSS** — 无框架依赖，直接通过 Hugo Pipes 构建
 - **自定义主题色** — 品牌蓝 #165DFF、深色 #1D2129、背景 #F5F7FA
