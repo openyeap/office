@@ -1,21 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>ABSLN - AI-Powered Business Solution on ABSLN — AI-Powered Business Solution | 智能驱动的商业解决方案</title>
-    <link>http://localhost:1313/</link>
-    <description>Recent content in ABSLN - AI-Powered Business Solution on ABSLN — AI-Powered Business Solution | 智能驱动的商业解决方案</description>
+    <title>ABSLN - 智能驱动的商业解决方案 on </title>
+    <link>/</link>
+    <description>Recent content in ABSLN - 智能驱动的商业解决方案 on </description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-CN</language>
     
-	<atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>ABSLN 多智能体平台</title>
-      <link>http://localhost:1313/agent/</link>
+      <link>/agent/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/agent/</guid>
+      <guid>/agent/</guid>
       <description>ABSLN 多智能体平台 智能决策中枢 · 自然语言驱动 · 多智能体协同 · 全链路可溯源
 借鉴成熟 AI Agent 架构与 ReAct 执行范式，结合企业管理实际需求，构建&#34;自然语言交互→任务拆解→工具调用→流程执行→结果分析→迭代优化&#34;全链路智能体系。
 ReAct 循环 多智能体集群 工具集市 回测模拟  立即体验 查看技术文档   多智能体集群 数据
@@ -30,10 +29,10 @@ ReAct 循环 多智能体集群 工具集市 回测模拟  立即体验 查看�
     
     <item>
       <title>DMS 企业动态数据管理系统</title>
-      <link>http://localhost:1313/dms/</link>
+      <link>/dms/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/dms/</guid>
+      <guid>/dms/</guid>
       <description>DMS 企业动态数据管理系统 全域数据资产底座 · 多租户 · 混合存储 · 全场景自定义
 打破传统管理软件固定模板局限，围绕多租户架构、混合数据存储、全场景自定义、全域数据治理、文件一体化管理五大核心方向全面升级。
 SaaS多租户 混合数据存储 零代码自定义 全域数据治理  立即体验 查看技术文档   结构化数据客户·订单·库存·财务 非结构化文件PDF·图片·音视频·文档 多源接入Excel·API·第三方系统 数据治理清洗·分类·归档·溯源  → 统一数字资产目录 →     产品概述 基于 DotNet 自主研发的DMS 企业动态数据管理系统，是整套 SaaS 平台的全域数据资产底座。它打破了传统管理软件固定模板、单一数据形态、单租户部署的局限，一站式解决企业数据散落、结构僵化、权限混乱、资产无法复用等痛点。
@@ -48,19 +47,19 @@ SaaS多租户 混合数据存储 零代码自定义 全域数据治理  立即�
     
     <item>
       <title>Koffer 动态脚本安全解释器</title>
-      <link>http://localhost:1313/koffer/</link>
+      <link>/koffer/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/koffer/</guid>
+      <guid>/koffer/</guid>
       <description></description>
     </item>
     
     <item>
       <title>关于 ABSLN</title>
-      <link>http://localhost:1313/about/</link>
+      <link>/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/about/</guid>
+      <guid>/about/</guid>
       <description>关于 ABSLN AI-Powered Business Solution — 智能驱动的商业解决方案
   品牌故事 我是一名深耕多年的 IT 程序员，长期专注于企业商业决策与数字化解决方案落地。在从业过程中，我发现了一个行业普遍存在、却始终没有被彻底解决的核心问题：当下绝大多数企业的信息化建设，仅仅停留在数据存储层面，始终无法真正实现数据资产化、流程自动化、决策智能化。
 市面上主流的企业管理软件与信息化系统，大多是固定模板式产品。企业采购上线后，只能被动适配软件预设的流程、表单与数据表。一旦企业业务调整、流程迭代、数据结构发生变化，原有系统便难以适配。企业要么花费高额成本联系厂商做二次开发，要么直接弃用重建。
@@ -80,10 +79,10 @@ SaaS多租户 混合数据存储 零代码自定义 全域数据治理  立即�
     
     <item>
       <title>量化实战 — A 股智能量化</title>
-      <link>http://localhost:1313/quant/</link>
+      <link>/quant/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/quant/</guid>
+      <guid>/quant/</guid>
       <description>标杆示范场景 A 股智能量化 以高复杂度金融场景，完整验证 ABSLN 全链路落地能力
   为什么选择 A 股量化作为标杆？ A 股市场是公开领域中，数据维度最多、更新频率最高、业务规则最复杂、决策最依赖人工经验的典型场景。行情、财务、公告、舆情、资金流等数据散落各处，标准杂乱；传统人工选股、复盘、策略研判效率低、主观性强；量化脚本又极易泄露篡改，无法安全商用——和传统企业数字化面临的痛点高度相似。
 既然最复杂的 A 股量化业务，能够在平台上完整实现数据资产化、流程自动化、决策智能化，那么中小企业的财务核算、进销存管理、客户运营、生产管控、供应链协同、办公自动化等各类信息化场景，都可以直接复用这套架构与运行逻辑。

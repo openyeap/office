@@ -1,5 +1,5 @@
 ---
-title: "ABSLN - AI-Powered Business Solution"
+title: "ABSLN - 智能驱动的商业解决方案"
 description: "智能驱动的商业解决方案 — 数据资产化、流程自动化、决策智能化"
 layout: "home"
 ---
