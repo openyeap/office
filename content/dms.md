@@ -17,8 +17,8 @@ description: "全域数据资产底座 · 多租户 · 混合存储 · 全场景
         <span class="px-3 py-1.5 bg-green-50 text-green-700 text-xs sm:text-sm rounded-full font-medium">全域数据治理</span>
       </div>
       <div class="flex flex-wrap justify-center lg:justify-start gap-3">
-        <a href="https://demo.absln.com" class="inline-block px-6 py-3 bg-green-600 text-white rounded-lg font-medium text-sm hover:bg-green-700 transition-colors">立即体验</a>
-        <a href="https://doc.absln.com/dms" class="inline-block px-6 py-3 border-2 border-green-600 text-green-600 rounded-lg font-medium text-sm hover:bg-green-50 transition-colors">查看技术文档</a>
+        <a href="https://quant.absln.com" class="inline-block px-6 py-3 bg-green-600 text-white rounded-lg font-medium text-sm hover:bg-green-700 transition-colors">立即体验</a>
+        <a href="https://docs.absln.com/dms" class="inline-block px-6 py-3 border-2 border-green-600 text-green-600 rounded-lg font-medium text-sm hover:bg-green-50 transition-colors">查看技术文档</a>
       </div>
     </div>
     <div class="flex-1 w-full max-w-lg lg:max-w-none">
@@ -119,7 +119,7 @@ description: "全域数据资产底座 · 多租户 · 混合存储 · 全场景
   <div class="max-w-content mx-auto px-4 text-center">
     <p class="text-white text-lg sm:text-xl lg:text-2xl font-bold mb-6 leading-relaxed max-w-2xl mx-auto">构建企业全域数据资产底座，让数据真正成为生产力</p>
     <div class="flex flex-wrap justify-center gap-3">
-      <a href="https://demo.absln.com" class="inline-block px-6 py-3 bg-white text-green-600 rounded-lg font-medium text-sm hover:bg-gray-100 transition-colors">立即进入演示平台</a>
+      <a href="https://quant.absln.com" class="inline-block px-6 py-3 bg-white text-green-600 rounded-lg font-medium text-sm hover:bg-gray-100 transition-colors">立即进入演示平台</a>
       <a href="/agent/" class="inline-block px-6 py-3 border-2 border-white text-white rounded-lg font-medium text-sm hover:bg-white/10 transition-colors">了解多智能体平台 →</a>
     </div>
   </div>

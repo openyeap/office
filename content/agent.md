@@ -17,8 +17,8 @@ description: "智能决策中枢 · 自然语言驱动 · 多智能体协同 · 
         <span class="px-3 py-1.5 bg-purple-50 text-purple-700 text-xs sm:text-sm rounded-full font-medium">回测模拟</span>
       </div>
       <div class="flex flex-wrap justify-center lg:justify-start gap-3">
-        <a href="https://demo.absln.com" class="inline-block px-6 py-3 bg-purple-600 text-white rounded-lg font-medium text-sm hover:bg-purple-700 transition-colors">立即体验</a>
-        <a href="https://doc.absln.com/agent" class="inline-block px-6 py-3 border-2 border-purple-600 text-purple-600 rounded-lg font-medium text-sm hover:bg-purple-50 transition-colors">查看技术文档</a>
+        <a href="https://quant.absln.com" class="inline-block px-6 py-3 bg-purple-600 text-white rounded-lg font-medium text-sm hover:bg-purple-700 transition-colors">立即体验</a>
+        <a href="https://docs.absln.com/agent" class="inline-block px-6 py-3 border-2 border-purple-600 text-purple-600 rounded-lg font-medium text-sm hover:bg-purple-50 transition-colors">查看技术文档</a>
       </div>
     </div>
     <div class="flex-1 w-full max-w-lg lg:max-w-none">
@@ -103,7 +103,7 @@ description: "智能决策中枢 · 自然语言驱动 · 多智能体协同 · 
   <div class="max-w-content mx-auto px-4 text-center">
     <p class="text-white text-lg sm:text-xl lg:text-2xl font-bold mb-6 leading-relaxed max-w-2xl mx-auto">让 AI 不再是"聊天工具"，而是可落地、可管控、可追溯的业务执行者</p>
     <div class="flex flex-wrap justify-center gap-3">
-      <a href="https://demo.absln.com" class="inline-block px-6 py-3 bg-white text-purple-600 rounded-lg font-medium text-sm hover:bg-gray-100 transition-colors">立即进入演示平台</a>
+      <a href="https://quant.absln.com" class="inline-block px-6 py-3 bg-white text-purple-600 rounded-lg font-medium text-sm hover:bg-gray-100 transition-colors">立即进入演示平台</a>
       <a href="https://quant.absln.com" class="inline-block px-6 py-3 border-2 border-white text-white rounded-lg font-medium text-sm hover:bg-white/10 transition-colors" target="_blank" rel="noopener">查看量化实战 →</a>
     </div>
   </div>

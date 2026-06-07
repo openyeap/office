@@ -73,8 +73,8 @@ description: "以高复杂度金融场景，完整验证 ABSLN 全链路落地�
   <div class="max-w-content mx-auto px-4 text-center">
     <p class="text-white text-lg sm:text-xl lg:text-2xl font-bold mb-6 leading-relaxed max-w-2xl mx-auto">眼见为实，立即体验 ABSLN 全链路智能解决方案</p>
     <div class="flex flex-wrap justify-center gap-3">
-      <a href="https://demo.absln.com" class="inline-block px-6 py-3 bg-white text-brand rounded-lg font-medium text-sm hover:bg-gray-100 transition-colors">进入演示平台</a>
-      <a href="/product/" class="inline-block px-6 py-3 border-2 border-white text-white rounded-lg font-medium text-sm hover:bg-white/10 transition-colors">探索全部产品</a>
+      <a href="https://quant.absln.com" class="inline-block px-6 py-3 bg-white text-brand rounded-lg font-medium text-sm hover:bg-gray-100 transition-colors">进入演示平台</a>
+      <a href="/" class="inline-block px-6 py-3 border-2 border-white text-white rounded-lg font-medium text-sm hover:bg-white/10 transition-colors">探索全部产品</a>
     </div>
   </div>
 </section>
