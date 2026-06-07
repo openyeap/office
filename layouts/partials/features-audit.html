@@ -1,0 +1,46 @@
+<section id="audit-log" class="py-20 lg:py-28 bg-white">
+  <div class="max-w-content mx-auto px-4">
+    <div class="flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
+      <div class="flex-1 w-full">
+        <div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200">
+          <div class="bg-gray-50 px-4 py-2 border-b border-gray-200 flex items-center justify-between">
+            <span class="text-sm font-medium text-deep">审计日志</span>
+            <div class="flex gap-2">
+              <span class="text-xs bg-blue-100 text-blue-700 px-2 py-0.5 rounded">检索</span>
+              <span class="text-xs bg-gray-100 text-gray-500 px-2 py-0.5 rounded">筛选</span>
+              <span class="text-xs bg-gray-100 text-gray-500 px-2 py-0.5 rounded">导出</span>
+            </div>
+          </div>
+          <div class="overflow-x-auto">
+            <table class="w-full text-xs text-left">
+              <thead class="bg-gray-50 text-gray-500">
+                <tr>
+                  <th class="px-4 py-2 font-medium">时间</th>
+                  <th class="px-4 py-2 font-medium">主体</th>
+                  <th class="px-4 py-2 font-medium">脚本</th>
+                  <th class="px-4 py-2 font-medium">状态</th>
+                  <th class="px-4 py-2 font-medium">详情</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="border-t border-gray-100"><td class="px-4 py-2">2024-12-01 10:23</td><td class="px-4 py-2">Agent-A</td><td class="px-4 py-2 font-mono text-xs">risk_eval.py</td><td class="px-4 py-2"><span class="text-green-600">✓ 成功</span></td><td class="px-4 py-2 text-gray-400">查看</td></tr>
+                <tr class="border-t border-gray-100"><td class="px-4 py-2">2024-12-01 10:24</td><td class="px-4 py-2">User-03</td><td class="px-4 py-2 font-mono text-xs">dsl_flow_01</td><td class="px-4 py-2"><span class="text-green-600">✓ 成功</span></td><td class="px-4 py-2 text-gray-400">查看</td></tr>
+                <tr class="border-t border-gray-100"><td class="px-4 py-2">2024-12-01 10:25</td><td class="px-4 py-2">Agent-B</td><td class="px-4 py-2 font-mono text-xs">data_sync.py</td><td class="px-4 py-2"><span class="text-red-500">✗ 异常</span></td><td class="px-4 py-2 text-gray-400">查看</td></tr>
+                <tr class="border-t border-gray-100"><td class="px-4 py-2">2024-12-01 10:26</td><td class="px-4 py-2">Agent-C</td><td class="px-4 py-2 font-mono text-xs">report_gen</td><td class="px-4 py-2"><span class="text-green-600">✓ 成功</span></td><td class="px-4 py-2 text-gray-400">查看</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="flex-1">
+        <h3 class="text-xl sm:text-2xl font-bold text-deep mb-6">全链路审计日志 · 操作全程可追溯</h3>
+        <p class="text-sm text-gray-600 leading-relaxed mb-3">
+          系统自动留存完整运行台账，包含：任务发起主体、执行时间、运行脚本、调用数据、运行结果、异常信息。
+        </p>
+        <p class="text-sm text-gray-600 leading-relaxed">
+          支持日志检索、筛选、导出，适配企业内控、合规审查、问题排查场景。所有自动化流程、AI 执行动作有据可查，让自动化与智能化流程透明可控。
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

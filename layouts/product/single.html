@@ -1,0 +1,17 @@
+{{ define "main" }}
+  {{ partial "hero.html" . }}
+  {{ partial "overview.html" . }}
+  <div class="max-w-content mx-auto px-4"><hr class="border-gray-100"></div>
+  {{ partial "capabilities.html" . }}
+  {{ partial "features-layer.html" . }}
+  <div class="max-w-content mx-auto px-4"><hr class="border-gray-100"></div>
+  {{ partial "features-encrypt.html" . }}
+  <div class="max-w-content mx-auto px-4"><hr class="border-gray-100"></div>
+  {{ partial "features-sandbox.html" . }}
+  <div class="max-w-content mx-auto px-4"><hr class="border-gray-100"></div>
+  {{ partial "features-audit.html" . }}
+  {{ partial "ecosystem.html" . }}
+  {{ partial "scenarios.html" . }}
+  {{ partial "license.html" . }}
+  {{ partial "cta.html" . }}
+{{ end }}

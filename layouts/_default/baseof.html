@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Title }}</title>
+    <meta name="keywords" content="{{ .Site.Params.keywords }}">
+    <meta name="description" content="{{ .Site.Params.description }}">
+
+    {{ $styles := resources.Get "css/main.css" | resources.PostCSS | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ $styles.RelPermalink }}">
+</head>
+<body class="bg-white text-deep font-sans antialiased">
+
+    {{ partial "nav.html" . }}
+
+    <main>
+        {{ block "main" . }}{{ end }}
+    </main>
+
+    {{ partial "footer.html" . }}
+    {{ partial "floating-nav.html" . }}
+
+    <script>
+        (function() {
+            const sections = document.querySelectorAll('section[id]');
+            const links = document.querySelectorAll('.floating-nav a');
+            function updateActive() {
+                let current = '';
+                sections.forEach(s => {
+                    const top = s.getBoundingClientRect().top;
+                    if (top <= 200) current = s.id;
+                });
+                links.forEach(l => {
+                    const href = l.getAttribute('href').replace('#', '');
+                    if (href === current) {
+                        l.classList.add('active');
+                    } else {
+                        l.classList.remove('active');
+                    }
+                });
+            }
+            window.addEventListener('scroll', updateActive, { passive: true });
+            updateActive();
+        })();
+    </script>
+
+</body>
+</html>

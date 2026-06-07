@@ -1,0 +1,27 @@
+<header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100">
+  <nav class="max-w-content mx-auto px-4 h-16 flex items-center justify-between">
+    <a href="{{ "/" | relLangURL }}" class="flex items-center gap-2 group">
+      <span class="text-xl font-bold text-deep tracking-tight">ABSLN</span>
+      <span class="hidden sm:inline text-xs text-gray-400 font-normal tracking-wide">智能驱动的商业解决方案</span>
+    </a>
+    <div class="hidden lg:flex items-center gap-8 text-sm">
+      <a href="/" class="nav-link {{ if eq .RelPermalink "/" }}text-brand font-medium{{ else }}text-deep hover:text-brand{{ end }} transition-colors">首页</a>
+      <a href="https://quant.absln.com" class="nav-link text-deep hover:text-brand transition-colors" target="_blank" rel="noopener">实战</a>
+      <a href="/docs/" class="nav-link text-deep hover:text-brand transition-colors">文档</a>
+      <a href="https://download.absln.com" class="nav-link text-deep hover:text-brand transition-colors" target="_blank" rel="noopener">下载</a>
+      <a href="/about/" class="nav-link {{ if eq .RelPermalink "/about/" }}text-brand font-medium{{ else }}text-deep hover:text-brand{{ end }} transition-colors">关于</a>
+    </div>
+    <button class="lg:hidden text-deep p-2" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" aria-label="菜单">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+    </button>
+  </nav>
+  <div id="mobile-menu" class="hidden lg:hidden border-t border-gray-100 bg-white">
+    <div class="px-4 py-3 flex flex-col gap-3 text-sm">
+      <a href="/" class="{{ if eq .RelPermalink "/" }}text-brand font-medium{{ else }}text-deep hover:text-brand{{ end }}">首页</a>
+      <a href="https://quant.absln.com" class="text-deep hover:text-brand" target="_blank" rel="noopener">实战</a>
+      <a href="/docs/" class="text-deep hover:text-brand">文档</a>
+      <a href="https://download.absln.com" class="text-deep hover:text-brand" target="_blank" rel="noopener">下载</a>
+      <a href="/about/" class="{{ if eq .RelPermalink "/about/" }}text-brand font-medium{{ else }}text-deep hover:text-brand{{ end }}">关于</a>
+    </div>
+  </div>
+</header>

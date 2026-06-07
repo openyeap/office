@@ -1,0 +1,126 @@
+---
+title: "DMS 企业动态数据管理系统"
+description: "全域数据资产底座 · 多租户 · 混合存储 · 全场景自定义 — ABSLN 核心数据基础设施"
+---
+
+<!-- DMS Hero -->
+<section class="pt-16 min-h-[80vh] flex items-center bg-gradient-to-br from-green-50 via-white to-surface">
+  <div class="max-w-content mx-auto px-4 py-20 lg:py-24 flex flex-col lg:flex-row items-center gap-12 lg:gap-16 w-full">
+    <div class="flex-1 text-center lg:text-left">
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-deep leading-tight mb-4">DMS 企业动态数据管理系统</h1>
+      <p class="text-lg sm:text-xl text-gray-600 mb-3 leading-relaxed">全域数据资产底座 · 多租户 · 混合存储 · 全场景自定义</p>
+      <p class="text-sm sm:text-base text-gray-500 mb-6 leading-relaxed max-w-xl mx-auto lg:mx-0">打破传统管理软件固定模板局限，围绕多租户架构、混合数据存储、全场景自定义、全域数据治理、文件一体化管理五大核心方向全面升级。</p>
+      <div class="flex flex-wrap justify-center lg:justify-start gap-2 mb-8">
+        <span class="px-3 py-1.5 bg-green-50 text-green-700 text-xs sm:text-sm rounded-full font-medium">SaaS多租户</span>
+        <span class="px-3 py-1.5 bg-green-50 text-green-700 text-xs sm:text-sm rounded-full font-medium">混合数据存储</span>
+        <span class="px-3 py-1.5 bg-green-50 text-green-700 text-xs sm:text-sm rounded-full font-medium">零代码自定义</span>
+        <span class="px-3 py-1.5 bg-green-50 text-green-700 text-xs sm:text-sm rounded-full font-medium">全域数据治理</span>
+      </div>
+      <div class="flex flex-wrap justify-center lg:justify-start gap-3">
+        <a href="https://demo.absln.com" class="inline-block px-6 py-3 bg-green-600 text-white rounded-lg font-medium text-sm hover:bg-green-700 transition-colors">立即体验</a>
+        <a href="https://doc.absln.com/dms" class="inline-block px-6 py-3 border-2 border-green-600 text-green-600 rounded-lg font-medium text-sm hover:bg-green-50 transition-colors">查看技术文档</a>
+      </div>
+    </div>
+    <div class="flex-1 w-full max-w-lg lg:max-w-none">
+      <div class="bg-white rounded-xl shadow-lg p-6">
+        <div class="grid grid-cols-2 gap-3 text-xs">
+          <div class="bg-green-50 rounded-lg p-3 text-center border border-green-100"><span class="block font-bold text-green-700 mb-1">结构化数据</span>客户·订单·库存·财务</div>
+          <div class="bg-blue-50 rounded-lg p-3 text-center border border-blue-100"><span class="block font-bold text-blue-700 mb-1">非结构化文件</span>PDF·图片·音视频·文档</div>
+          <div class="bg-purple-50 rounded-lg p-3 text-center border border-purple-100"><span class="block font-bold text-purple-700 mb-1">多源接入</span>Excel·API·第三方系统</div>
+          <div class="bg-yellow-50 rounded-lg p-3 text-center border border-yellow-100"><span class="block font-bold text-yellow-700 mb-1">数据治理</span>清洗·分类·归档·溯源</div>
+        </div>
+        <div class="text-center mt-4 text-sm font-bold text-deep">→ 统一数字资产目录 →</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 产品概述 -->
+<section class="py-20 lg:py-28 bg-white">
+  <div class="max-w-content mx-auto px-4 text-center">
+    <h2 class="text-2xl sm:text-3xl font-bold text-deep mb-10">产品概述</h2>
+    <div class="max-w-3xl mx-auto space-y-4 text-sm sm:text-base text-gray-600 leading-relaxed">
+      <p>基于 DotNet 自主研发的<strong class="text-deep">DMS 企业动态数据管理系统</strong>，是整套 SaaS 平台的<strong class="text-green-600">全域数据资产底座</strong>。它打破了传统管理软件固定模板、单一数据形态、单租户部署的局限，一站式解决企业数据散落、结构僵化、权限混乱、资产无法复用等痛点。</p>
+      <p>系统原生支持 <strong class="text-deep">SaaS 多租户模式</strong>，采用数据隔离+资源隔离结合的方案，适配公有云 SaaS、私有部署、集团多子公司管理等多种形态。不同企业、不同部门作为独立租户，拥有专属数据空间、数据表结构、文件仓库、权限体系与应用配置。</p>
+    </div>
+  </div>
+</section>
+
+<div class="max-w-content mx-auto px-4"><hr class="border-gray-100"></div>
+
+<!-- 核心能力 -->
+<section class="py-20 lg:py-28 bg-surface">
+  <div class="max-w-content mx-auto px-4">
+    <h2 class="text-2xl sm:text-3xl font-bold text-deep text-center mb-12">五大核心能力</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="card-hover bg-white rounded-xl p-6 shadow-sm">
+        <div class="w-12 h-12 bg-green-50 rounded-lg flex items-center justify-center mb-4"><span class="text-green-600 font-bold text-lg">01</span></div>
+        <h3 class="text-lg font-bold text-deep mb-2">多租户架构设计</h3>
+        <p class="text-sm text-gray-500 leading-relaxed">原生支持 SaaS 多租户模式，数据隔离+资源隔离，适配公有云、私有部署、集团多子公司管理。租户自主配置组织架构、岗位权限、数据范围。</p>
+      </div>
+      <div class="card-hover bg-white rounded-xl p-6 shadow-sm">
+        <div class="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center mb-4"><span class="text-blue-600 font-bold text-lg">02</span></div>
+        <h3 class="text-lg font-bold text-deep mb-2">结构化+非结构化混合管理</h3>
+        <p class="text-sm text-gray-500 leading-relaxed">关系数据库+文件数据混合存储架构，支持全类型文件上传、分类、索引、预览与溯源。业务数据与文件双向关联，整合为统一数字资产。</p>
+      </div>
+      <div class="card-hover bg-white rounded-xl p-6 shadow-sm">
+        <div class="w-12 h-12 bg-purple-50 rounded-lg flex items-center justify-center mb-4"><span class="text-purple-600 font-bold text-lg">03</span></div>
+        <h3 class="text-lg font-bold text-deep mb-2">全维度动态自定义</h3>
+        <p class="text-sm text-gray-500 leading-relaxed">彻底摆脱固定模板束缚，自定义数据表、字段、业务流程、校验规则、联动逻辑、表单样式。无需二次开发，随时调整适配业务迭代。</p>
+      </div>
+      <div class="card-hover bg-white rounded-xl p-6 shadow-sm">
+        <div class="w-12 h-12 bg-yellow-50 rounded-lg flex items-center justify-center mb-4"><span class="text-yellow-600 font-bold text-lg">04</span></div>
+        <h3 class="text-lg font-bold text-deep mb-2">全域数据治理与资产运营</h3>
+        <p class="text-sm text-gray-500 leading-relaxed">多数据源一键接入，自动清洗、格式统一、去重纠错。数据资产目录实现标签化分类、权限分级、使用统计，配合备份恢复迁移归档。</p>
+      </div>
+      <div class="card-hover bg-white rounded-xl p-6 shadow-sm">
+        <div class="w-12 h-12 bg-red-50 rounded-lg flex items-center justify-center mb-4"><span class="text-red-600 font-bold text-lg">05</span></div>
+        <h3 class="text-lg font-bold text-deep mb-2">精细化权限与协同</h3>
+        <p class="text-sm text-gray-500 leading-relaxed">按组织、岗位、用户分配数据查看、编辑、删除、导出、文件下载权限。多人协同编辑、操作留痕、版本回溯，赋能团队协作办公。</p>
+      </div>
+      <div class="card-hover bg-white rounded-xl p-6 shadow-sm border-2 border-green-200">
+        <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4"><svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg></div>
+        <h3 class="text-lg font-bold text-deep mb-2">DMS 核心定位</h3>
+        <p class="text-sm text-green-600 font-medium leading-relaxed">全域数据资产底座 — 唯一数据来源，为上层所有智能化能力筑牢数据根基</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 与平台生态协同 -->
+<section class="py-20 lg:py-28 bg-white">
+  <div class="max-w-content mx-auto px-4">
+    <h2 class="text-2xl sm:text-3xl font-bold text-deep text-center mb-8">平台生态协同</h2>
+    <div class="max-w-3xl mx-auto text-center">
+      <p class="text-sm sm:text-base text-gray-600 leading-relaxed mb-3">DMS 从底层完成了企业全域数据的归集、治理、存储与权限管控，是 AI 智能体、自动化脚本、业务流程运转的<strong class="text-deep">唯一数据来源</strong>。</p>
+      <p class="text-sm text-gray-600 leading-relaxed mb-8">向上对接 <strong class="text-brand">Koffer 安全执行引擎</strong>提供数据读写支持，对接 <strong class="text-purple-600">ABSLN 多智能体平台</strong>提供数据资产与业务上下文，三大产品深度联动形成完整闭环。</p>
+    </div>
+    <div class="flex flex-col lg:flex-row items-center justify-center gap-3 lg:gap-6 max-w-2xl mx-auto mt-8">
+      <div class="bg-green-50 rounded-xl shadow-sm p-4 text-center w-40 lg:w-48 border-2 border-green-300">
+        <div class="font-bold text-green-700 text-sm">DMS 数据底座</div>
+        <div class="text-xs text-gray-400 mt-1">存储 · 治理 · 权限</div>
+      </div>
+      <span class="text-gray-400 text-2xl rotate-90 lg:rotate-0">→</span>
+      <div class="bg-brand-light rounded-xl shadow-sm p-4 text-center w-40 lg:w-48 border-2 border-brand">
+        <div class="font-bold text-brand text-sm">Koffer 执行引擎</div>
+        <div class="text-xs text-gray-400 mt-1">加密 · 沙箱 · 审计</div>
+      </div>
+      <span class="text-gray-400 text-2xl rotate-90 lg:rotate-0">→</span>
+      <div class="bg-purple-50 rounded-xl shadow-sm p-4 text-center w-40 lg:w-48 border-2 border-purple-200">
+        <div class="font-bold text-purple-600 text-sm">多智能体平台</div>
+        <div class="text-xs text-gray-400 mt-1">分析 · 决策 · 闭环</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="py-20 lg:py-28 bg-green-600">
+  <div class="max-w-content mx-auto px-4 text-center">
+    <p class="text-white text-lg sm:text-xl lg:text-2xl font-bold mb-6 leading-relaxed max-w-2xl mx-auto">构建企业全域数据资产底座，让数据真正成为生产力</p>
+    <div class="flex flex-wrap justify-center gap-3">
+      <a href="https://demo.absln.com" class="inline-block px-6 py-3 bg-white text-green-600 rounded-lg font-medium text-sm hover:bg-gray-100 transition-colors">立即进入演示平台</a>
+      <a href="/agent/" class="inline-block px-6 py-3 border-2 border-white text-white rounded-lg font-medium text-sm hover:bg-white/10 transition-colors">了解多智能体平台 →</a>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(hugo *)",
+      "Bash(d:\\program\\hugo\\hugo.exe *)",
+      "Bash(npm install *)",
+      "Bash(dir *)",
+      "Bash(timeout *)"
+    ]
+  },
+  "$version": 4
+}
