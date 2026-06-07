@@ -22,7 +22,6 @@ hugo.toml            # 站点配置
 ```bash
 # 启动开发服务器（热重载）
 D:\Program\hugo\hugo.exe server --port 1313
-
 # 构建生产版本
 D:\Program\hugo\hugo.exe --minify
 
@@ -31,27 +30,9 @@ D:\Program\hugo\hugo.exe --minify
 
 ## 部署到 Cloudflare Pages
 
-### 方式一：Wrangler CLI
+1. Cloudflare Dashboard → Pages → Connect to Git
+2. 构建命令：`hugo --minify`，输出目录：`public`
 
-```bash
-# 安装并登录（仅首次）
-npm install -g wrangler
-npx wrangler login
-
-# 构建并部署
-D:\Program\hugo\hugo.exe --minify
-npx wrangler pages deploy public
-```
-
-### 方式二：Git 自动部署
-
-1. 推送代码到 GitHub / GitLab
-2. Cloudflare Dashboard → Pages → Connect to Git
-3. 构建命令：`hugo --minify`，输出目录：`public`
-
-### 方式三：手动上传
-
-[Cloudflare Pages](https://dash.cloudflare.com/pages) → 上传资产 → 拖入 `public` 文件夹。
 
 ## 技术栈
 

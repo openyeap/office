@@ -1,1 +1,39 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml"><url><loc>/</loc></url><url><loc>/agent/</loc></url><url><loc>/categories/</loc><priority>0</priority></url><url><loc>/dms/</loc></url><url><loc>/koffer/</loc></url><url><loc>/tags/</loc><priority>0</priority></url><url><loc>/about/</loc></url><url><loc>/quant/</loc></url></urlset>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>http://localhost:1313/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/agent/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/dms/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/koffer/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/tags/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/about/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/quant/</loc>
+  </url>
+  
+</urlset>

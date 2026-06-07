@@ -1,10 +1,461 @@
-html {
-  scroll-behavior: smooth;
+/* ============================================================
+   ABSLN — Pure CSS utility framework
+   Manual replacement for Tailwind CSS (no build step required)
+   ============================================================ */
+
+/* ---- CSS Custom Properties ---- */
+:root {
+  --color-brand: #165DFF;
+  --color-brand-dark: #1248CC;
+  --color-brand-light: #E8F0FF;
+  --color-deep: #1D2129;
+  --color-surface: #F5F7FA;
+  --color-white: #ffffff;
+  --color-gray-50: #f9fafb;
+  --color-gray-100: #f3f4f6;
+  --color-gray-200: #e5e7eb;
+  --color-gray-400: #9ca3af;
+  --color-gray-500: #6b7280;
+  --color-gray-600: #4b5563;
+  --color-gray-700: #374151;
+  --color-blue-50: #eff6ff;
+  --color-blue-100: #dbeafe;
+  --color-blue-700: #1d4ed8;
+  --color-green-50: #f0fdf4;
+  --color-green-100: #dcfce7;
+  --color-green-200: #bbf7d0;
+  --color-green-400: #4ade80;
+  --color-green-500: #22c55e;
+  --color-green-600: #16a34a;
+  --color-purple-50: #faf5ff;
+  --color-purple-100: #f3e8ff;
+  --color-purple-200: #e9d5ff;
+  --color-purple-500: #a855f7;
+  --color-purple-600: #9333ea;
+  --color-purple-700: #7e22ce;
+  --color-yellow-50: #fefce8;
+  --color-yellow-400: #facc15;
+  --color-yellow-700: #a16207;
+  --color-red-400: #f87171;
+  --color-red-500: #ef4444;
+  --font-mono: Consolas, Monaco, "Courier New", monospace;
+  --max-w-content: 1400px;
 }
 
-.nav-link {
-  position: relative;
+/* ---- Reset / Base ---- */
+*, ::before, ::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body { line-height: 1.5; -webkit-font-smoothing: antialiased; }
+img, svg, video, canvas { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: inherit; }
+
+/* ============================================================
+   LAYOUT
+   ============================================================ */
+
+/* Display */
+.block        { display: block; }
+.inline-block { display: inline-block; }
+.inline       { display: inline; }
+.flex         { display: flex; }
+.inline-flex  { display: inline-flex; }
+.grid         { display: grid; }
+.hidden       { display: none; }
+
+/* Flex */
+.flex-1          { flex: 1 1 0%; }
+.flex-col        { flex-direction: column; }
+.flex-row        { flex-direction: row; }
+.flex-wrap       { flex-wrap: wrap; }
+.items-center    { align-items: center; }
+.items-start     { align-items: flex-start; }
+.justify-center  { justify-content: center; }
+.justify-between { justify-content: space-between; }
+.justify-start   { justify-content: flex-start; }
+
+/* Order */
+.order-1 { order: 1; }
+.order-2 { order: 2; }
+
+/* Grid */
+.grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+.grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
+/* Positioning */
+.fixed    { position: fixed; }
+.relative { position: relative; }
+.top-0    { top: 0; }
+.left-0   { left: 0; }
+.right-0  { right: 0; }
+
+/* Centering */
+.mx-auto { margin-left: auto; margin-right: auto; }
+.my-auto { margin-top: auto; margin-bottom: auto; }
+
+/* ============================================================
+   SPACING
+   ============================================================ */
+
+/* Padding — all sides */
+.p-2 { padding: 8px; }
+.p-3 { padding: 12px; }
+.p-4 { padding: 20px; }
+.p-5 { padding: 24px; }
+.p-6 { padding: 32px; }
+
+/* Padding — x */
+.px-2 { padding-left: 8px; padding-right: 8px; }
+.px-3 { padding-left: 12px; padding-right: 12px; }
+.px-4 { padding-left: 20px; padding-right: 20px; }
+.px-5 { padding-left: 24px; padding-right: 24px; }
+.px-6 { padding-left: 32px; padding-right: 32px; }
+
+/* Padding — y */
+.py-1   { padding-top: 4px; padding-bottom: 4px; }
+.py-1\.5 { padding-top: 6px; padding-bottom: 6px; }
+.py-2   { padding-top: 8px; padding-bottom: 8px; }
+.py-2\.5 { padding-top: 10px; padding-bottom: 10px; }
+.py-3   { padding-top: 12px; padding-bottom: 12px; }
+.py-10  { padding-top: 48px; padding-bottom: 48px; }
+.py-20  { padding-top: 96px; padding-bottom: 96px; }
+
+/* Padding — top/bottom only */
+.pt-16 { padding-top: 64px; }
+.pt-24 { padding-top: 96px; }
+.pb-16 { padding-bottom: 64px; }
+
+/* Margin — bottom */
+.mb-0\.5 { margin-bottom: 2px; }
+.mb-1  { margin-bottom: 4px; }
+.mb-2  { margin-bottom: 8px; }
+.mb-3  { margin-bottom: 12px; }
+.mb-4  { margin-bottom: 16px; }
+.mb-6  { margin-bottom: 24px; }
+.mb-8  { margin-bottom: 32px; }
+.mb-10 { margin-bottom: 48px; }
+.mb-12 { margin-bottom: 64px; }
+
+/* Margin — top */
+.mt-0\.5 { margin-top: 2px; }
+.mt-1  { margin-top: 4px; }
+.mt-4  { margin-top: 16px; }
+
+/* Margin — left */
+.ml-2 { margin-left: 8px; }
+
+/* Gap */
+.gap-1   { gap: 4px; }
+.gap-1\.5 { gap: 6px; }
+.gap-2   { gap: 8px; }
+.gap-3   { gap: 12px; }
+.gap-4   { gap: 16px; }
+.gap-6   { gap: 32px; }
+.gap-8   { gap: 40px; }
+.gap-10  { gap: 48px; }
+.gap-12  { gap: 56px; }
+.gap-x-4 { column-gap: 16px; }
+.gap-y-1 { row-gap: 4px; }
+
+/* Space-y (lobotomized owl) */
+.space-y-2 > * + * { margin-top: 8px; }
+.space-y-3 > * + * { margin-top: 12px; }
+.space-y-4 > * + * { margin-top: 16px; }
+
+/* ============================================================
+   SIZING
+   ============================================================ */
+
+/* Width */
+.w-3   { width: 12px; }
+.w-6   { width: 24px; }
+.w-7   { width: 32px; }
+.w-8   { width: 36px; }
+.w-12  { width: 48px; }
+.w-14  { width: 64px; }
+.w-16  { width: 72px; }
+.w-40  { width: 160px; }
+.w-full { width: 100%; }
+
+/* Height */
+.h-3  { height: 12px; }
+.h-6  { height: 24px; }
+.h-7  { height: 32px; }
+.h-8  { height: 36px; }
+.h-12 { height: 48px; }
+.h-14 { height: 64px; }
+.h-16 { height: 72px; }
+
+/* Max-width */
+.max-w-none    { max-width: none; }
+.max-w-lg      { max-width: 640px; }
+.max-w-md      { max-width: 512px; }
+.max-w-xl      { max-width: 720px; }
+.max-w-2xl     { max-width: 800px; }
+.max-w-3xl     { max-width: 960px; }
+.max-w-4xl     { max-width: 1080px; }
+.max-w-content { max-width: var(--max-w-content); }
+
+/* Min-height */
+.min-h-screen  { min-height: 100vh; }
+.min-h-\[90vh\] { min-height: 90vh; }
+
+/* ============================================================
+   TYPOGRAPHY
+   ============================================================ */
+
+/* Font sizes */
+.text-xs   { font-size: 0.8125rem; line-height: 1.125rem; }
+.text-sm   { font-size: 1rem; line-height: 1.5rem; }
+.text-base { font-size: 1.125rem; line-height: 1.75rem; }
+.text-lg   { font-size: 1.25rem; line-height: 1.75rem; }
+.text-xl   { font-size: 1.5rem; line-height: 2rem; }
+.text-2xl  { font-size: 1.75rem; line-height: 2.25rem; }
+.text-3xl  { font-size: 2.125rem; line-height: 2.5rem; }
+.text-4xl  { font-size: 2.5rem; line-height: 2.75rem; }
+.text-5xl  { font-size: 3.25rem; line-height: 1; }
+.text-6xl  { font-size: 4rem; line-height: 1; }
+
+/* Font weights */
+.font-normal   { font-weight: 400; }
+.font-medium   { font-weight: 500; }
+.font-semibold { font-weight: 600; }
+.font-bold     { font-weight: 700; }
+
+/* Line height */
+.leading-tight   { line-height: 1.25; }
+.leading-relaxed { line-height: 1.625; }
+
+/* Letter spacing */
+.tracking-tight { letter-spacing: -0.025em; }
+.tracking-wide  { letter-spacing: 0.025em; }
+
+/* Text alignment */
+.text-left   { text-align: left; }
+.text-center { text-align: center; }
+.text-right  { text-align: right; }
+
+/* Font family */
+.font-sans { font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
+.font-mono { font-family: var(--font-mono); }
+
+/* Antialiasing */
+.antialiased { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+
+/* Text decoration */
+.no-underline { text-decoration: none; }
+
+/* List */
+.list-decimal { list-style-type: decimal; }
+.list-inside  { list-style-position: inside; }
+
+/* ============================================================
+   TEXT COLORS
+   ============================================================ */
+
+.text-white      { color: var(--color-white); }
+.text-white\/80  { color: rgba(255, 255, 255, 0.8); }
+.text-deep       { color: var(--color-deep); }
+.text-brand      { color: var(--color-brand); }
+.text-gray-400   { color: var(--color-gray-400); }
+.text-gray-500   { color: var(--color-gray-500); }
+.text-gray-600   { color: var(--color-gray-600); }
+.text-gray-700   { color: var(--color-gray-700); }
+.text-green-500  { color: var(--color-green-500); }
+.text-green-600  { color: var(--color-green-600); }
+.text-purple-500 { color: var(--color-purple-500); }
+.text-purple-600 { color: var(--color-purple-600); }
+.text-purple-700 { color: var(--color-purple-700); }
+.text-blue-700   { color: var(--color-blue-700); }
+.text-yellow-700 { color: var(--color-yellow-700); }
+.text-red-500    { color: var(--color-red-500); }
+
+/* ============================================================
+   BACKGROUND COLORS
+   ============================================================ */
+
+.bg-white        { background-color: var(--color-white); }
+.bg-white\/95    { background-color: rgba(255, 255, 255, 0.95); }
+.bg-deep         { background-color: var(--color-deep); }
+.bg-brand        { background-color: var(--color-brand); }
+.bg-brand-light  { background-color: var(--color-brand-light); }
+.bg-surface      { background-color: var(--color-surface); }
+.bg-gray-50      { background-color: var(--color-gray-50); }
+.bg-gray-100     { background-color: var(--color-gray-100); }
+.bg-gray-200     { background-color: var(--color-gray-200); }
+.bg-green-50     { background-color: var(--color-green-50); }
+.bg-green-100    { background-color: var(--color-green-100); }
+.bg-green-400    { background-color: var(--color-green-400); }
+.bg-purple-50    { background-color: var(--color-purple-50); }
+.bg-purple-100   { background-color: var(--color-purple-100); }
+.bg-blue-50      { background-color: var(--color-blue-50); }
+.bg-blue-100     { background-color: var(--color-blue-100); }
+.bg-yellow-50    { background-color: var(--color-yellow-50); }
+.bg-yellow-400   { background-color: var(--color-yellow-400); }
+.bg-red-400      { background-color: var(--color-red-400); }
+
+/* Gradient */
+.bg-gradient-to-br {
+  background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
 }
+.from-blue-50 {
+  --tw-gradient-from: var(--color-blue-50);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(239 246 255 / 0));
+}
+.via-white {
+  --tw-gradient-to: rgb(255 255 255 / 0);
+  --tw-gradient-stops: var(--tw-gradient-from), #ffffff, var(--tw-gradient-to, rgb(255 255 255 / 0));
+}
+.to-surface {
+  --tw-gradient-to: var(--color-surface);
+}
+
+/* ============================================================
+   BORDERS
+   ============================================================ */
+
+.border       { border: 1px solid; }
+.border-0     { border: 0; }
+.border-2     { border-width: 2px; }
+.border-t     { border-top: 1px solid; }
+.border-b     { border-bottom: 1px solid; }
+
+.border-white       { border-color: var(--color-white); }
+.border-brand       { border-color: var(--color-brand); }
+.border-gray-100    { border-color: var(--color-gray-100); }
+.border-gray-200    { border-color: var(--color-gray-200); }
+.border-blue-100    { border-color: var(--color-blue-100); }
+.border-green-100   { border-color: var(--color-green-100); }
+.border-green-200   { border-color: var(--color-green-200); }
+.border-purple-100  { border-color: var(--color-purple-100); }
+.border-purple-200  { border-color: var(--color-purple-200); }
+
+.rounded       { border-radius: 0.25rem; }
+.rounded-lg    { border-radius: 0.5rem; }
+.rounded-xl    { border-radius: 0.75rem; }
+.rounded-full  { border-radius: 9999px; }
+.rounded-none  { border-radius: 0; }
+
+/* Divide (children borders) */
+.divide-x > :not(:first-child) { border-left: 1px solid; }
+.divide-gray-100 > :not(:first-child) { border-left-color: var(--color-gray-100); }
+
+/* ============================================================
+   EFFECTS
+   ============================================================ */
+
+.shadow     { box-shadow: 0 1px 3px 0 rgba(0,0,0,0.1), 0 1px 2px -1px rgba(0,0,0,0.1); }
+.shadow-sm  { box-shadow: 0 1px 2px 0 rgba(0,0,0,0.05); }
+.shadow-md  { box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1); }
+.shadow-lg  { box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1); }
+
+.backdrop-blur-sm { backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); }
+
+/* ============================================================
+   TRANSITIONS & TRANSFORMS
+   ============================================================ */
+
+.transition-colors { transition-property: color, background-color, border-color, text-decoration-color, fill, stroke; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-duration: 150ms; }
+
+.rotate-90 { transform: rotate(90deg); }
+
+/* ============================================================
+   INTERACTIVE STATES
+   ============================================================ */
+
+.hover\:text-brand:hover  { color: var(--color-brand); }
+.hover\:text-white:hover  { color: var(--color-white); }
+
+.hover\:bg-brand-light:hover { background-color: var(--color-brand-light); }
+.hover\:bg-brand-dark:hover  { background-color: var(--color-brand-dark); }
+.hover\:bg-gray-100:hover    { background-color: var(--color-gray-100); }
+.hover\:bg-white\/10:hover   { background-color: rgba(255,255,255,0.1); }
+
+.hover\:border-brand:hover { border-color: var(--color-brand); }
+
+/* Group hover */
+.group:hover .group-hover\:bg-green-100  { background-color: var(--color-green-100); }
+.group:hover .group-hover\:bg-purple-100 { background-color: var(--color-purple-100); }
+
+/* ============================================================
+   Z-INDEX / OVERFLOW
+   ============================================================ */
+
+.z-40 { z-index: 40; }
+.z-50 { z-index: 50; }
+
+.overflow-hidden  { overflow: hidden; }
+.overflow-x-auto  { overflow-x: auto; }
+
+/* ============================================================
+   PROSE (basic rich-text styling)
+   ============================================================ */
+
+.prose { max-width: 65ch; color: var(--color-deep); }
+.prose h2 { font-size: 1.5rem; font-weight: 700; margin-top: 2rem; margin-bottom: 1rem; }
+.prose h3 { font-size: 1.25rem; font-weight: 600; margin-top: 1.5rem; margin-bottom: 0.75rem; }
+.prose p  { margin-bottom: 1rem; line-height: 1.75; }
+.prose ul, .prose ol { margin-bottom: 1rem; padding-left: 1.5rem; }
+.prose li { margin-bottom: 0.25rem; }
+.prose-gray { color: var(--color-gray-600); }
+
+/* ============================================================
+   RESPONSIVE — sm (640px+)
+   ============================================================ */
+@media (min-width: 640px) {
+  .sm\:inline      { display: inline; }
+  .sm\:block       { display: block; }
+  .sm\:flex        { display: flex; }
+  .sm\:mx-0        { margin-left: 0; margin-right: 0; }
+  .sm\:p-6         { padding: 24px; }
+  .sm\:text-left   { text-align: left; }
+  .sm\:text-sm     { font-size: 1rem; line-height: 1.5rem; }
+  .sm\:text-base   { font-size: 1.125rem; line-height: 1.75rem; }
+  .sm\:text-xl     { font-size: 1.5rem; line-height: 2rem; }
+  .sm\:text-2xl    { font-size: 1.75rem; line-height: 2.25rem; }
+  .sm\:text-3xl    { font-size: 2.125rem; line-height: 2.5rem; }
+  .sm\:text-4xl    { font-size: 2.5rem; line-height: 2.75rem; }
+  .sm\:text-5xl    { font-size: 3.25rem; line-height: 1; }
+  .sm\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+/* ============================================================
+   RESPONSIVE — md (768px+)
+   ============================================================ */
+@media (min-width: 768px) {
+  .md\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+/* ============================================================
+   RESPONSIVE — lg (1024px+)
+   ============================================================ */
+@media (min-width: 1024px) {
+  .lg\:flex          { display: flex; }
+  .lg\:flex-row      { flex-direction: row; }
+  .lg\:hidden        { display: none; }
+  .lg\:order-1       { order: 1; }
+  .lg\:order-2       { order: 2; }
+  .lg\:justify-start { justify-content: flex-start; }
+  .lg\:mx-0          { margin-left: 0; margin-right: 0; }
+  .lg\:py-24         { padding-top: 112px; padding-bottom: 112px; }
+  .lg\:py-28         { padding-top: 128px; padding-bottom: 128px; }
+  .lg\:gap-16        { gap: 80px; }
+  .lg\:grid-cols-3   { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .lg\:grid-cols-4   { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .lg\:max-w-none    { max-width: none; }
+  .lg\:text-left     { text-align: left; }
+  .lg\:text-2xl      { font-size: 1.75rem; line-height: 2.25rem; }
+  .lg\:text-5xl      { font-size: 3.25rem; line-height: 1; }
+  .lg\:text-6xl      { font-size: 4rem; line-height: 1; }
+  .lg\:w-48          { width: 192px; }
+  .lg\:rotate-0      { transform: rotate(0deg); }
+}
+
+/* ============================================================
+   CUSTOM COMPONENTS (migrated from Tailwind @apply)
+   ============================================================ */
+
+.nav-link { position: relative; }
 .nav-link::after {
   content: '';
   position: absolute;
@@ -12,34 +463,26 @@ html {
   left: 0;
   height: 2px;
   width: 0;
-  background: #165DFF;
+  background: var(--color-brand);
   transition: all 200ms;
 }
-.nav-link:hover::after {
-  width: 100%;
-}
+.nav-link:hover::after { width: 100%; }
 
-.card-hover {
-  transition: transform 200ms ease-in-out;
-}
+.card-hover { transition: transform 200ms ease-in-out; }
 .card-hover:hover {
   transform: translateY(-4px);
   box-shadow: 0 12px 32px rgba(22, 93, 255, 0.12);
 }
 
-.anchor-dot {
-  transition: color 200ms;
-}
+.anchor-dot { transition: color 200ms; }
 .anchor-dot:hover,
-.anchor-dot.active {
-  color: #165DFF;
-}
+.anchor-dot.active { color: var(--color-brand); }
 
 .code-block {
   background: #1e1e1e;
   color: #d4d4d4;
   border-radius: 0.5rem;
-  font-family: Consolas, Monaco, "Courier New", monospace;
+  font-family: var(--font-mono);
   font-size: 13px;
 }
 
@@ -48,7 +491,7 @@ html {
   color: #333;
   border: 1px solid #e5e5e5;
   border-radius: 0.5rem;
-  font-family: Consolas, Monaco, "Courier New", monospace;
+  font-family: var(--font-mono);
   font-size: 13px;
 }
 
@@ -61,12 +504,10 @@ html {
   display: none;
 }
 @media (min-width: 1024px) {
-  .floating-nav {
-    display: block;
-  }
+  .floating-nav { display: block; }
 }
 @media (min-width: 1520px) {
   .floating-nav {
-    right: calc((100vw - 1200px) / 2 - 160px);
+    right: calc((100vw - var(--max-w-content)) / 2 - 160px);
   }
 }
