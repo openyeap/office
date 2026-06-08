@@ -2,6 +2,9 @@ baseURL = 'https://absln.com/'
 languageCode = 'zh-CN'
 title = 'ABSLN — AI-Powered Business Solution | 智能驱动的商业解决方案'
 
+[markup.goldmark.renderer]
+  unsafe = true
+
 [params]
   description = 'ABSLN 全栈自研企业级 SaaS 平台：DMS 全域数据底座 + Koffer 安全执行引擎 + 多智能体协同平台，三位一体构建企业数字化完整闭环。'
   keywords = 'ABSLN,企业数字化,SaaS,数据管理,AI智能体,脚本安全执行,量化金融'

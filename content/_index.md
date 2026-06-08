@@ -4,9 +4,6 @@ description: "智能驱动的商业解决方案 — 数据资产化、流程自�
 layout: "home"
 ---
 
-
-
-
 <section class="pt-16 min-h-[40vh] flex items-center bg-gradient-to-br from-blue-50 via-white to-surface">
   <div class="max-w-content mx-auto px-4 py-16 text-center">
     <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-deep leading-tight mb-4">产品中心</h1>
@@ -50,29 +47,4 @@ layout: "home"
     </div>
   </div>
 </section>
-
-<!-- 架构总览 -->
-<section class="py-20 lg:py-28 bg-surface">
-  <div class="max-w-content mx-auto px-4">
-    <h2 class="text-2xl sm:text-3xl font-bold text-deep text-center mb-10">三层架构 · 深度协同</h2>
-    <div class="flex flex-col lg:flex-row items-center justify-center gap-4 lg:gap-8 max-w-3xl mx-auto">
-      <div class="bg-white rounded-xl p-6 text-center shadow-sm w-48">
-        <div class="text-xs text-green-600 font-medium mb-1">数据底座</div>
-        <div class="font-bold text-deep mb-1">DMS</div>
-        <div class="text-xs text-gray-400">全域数据归集<br>治理与管控</div>
-      </div>
-      <span class="text-2xl text-gray-300 rotate-90 lg:rotate-0">↑↓</span>
-      <div class="bg-brand-light rounded-xl p-6 text-center shadow-sm w-48 border-2 border-brand">
-        <div class="text-xs text-brand font-medium mb-1">执行引擎</div>
-        <div class="font-bold text-deep mb-1">Koffer</div>
-        <div class="text-xs text-gray-400">安全加密执行<br>AI沙箱隔离</div>
-      </div>
-      <span class="text-2xl text-gray-300 rotate-90 lg:rotate-0">↑↓</span>
-      <div class="bg-white rounded-xl p-6 text-center shadow-sm w-48">
-        <div class="text-xs text-purple-600 font-medium mb-1">智能大脑</div>
-        <div class="font-bold text-deep mb-1">ABSLN Agent</div>
-        <div class="text-xs text-gray-400">任务拆解调度<br>智能决策闭环</div>
-      </div>
-    </div>
-  </div>
-</section>
+ 
